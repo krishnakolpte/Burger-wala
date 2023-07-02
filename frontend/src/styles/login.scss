@@ -1,0 +1,30 @@
+/** @format */
+
+@import "colors";
+
+.login {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../assets/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > button {
+        padding: 1rem 3rem;
+        border-radius: 10px;
+        color: $lightdark;
+        border: none;
+        outline: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        &:hover {
+            color: $red;
+        }
+    }
+}

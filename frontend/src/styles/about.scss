@@ -1,0 +1,122 @@
+/** @format */
+
+@import "colors";
+
+.about {
+    width: 100%;
+    background-color: $pink;
+
+    > main {
+        background-color: white;
+        max-width: 900px;
+        margin: auto;
+        height: 100%;
+        > h1 {
+            font: 500 2rem "Roboto";
+            text-transform: uppercase;
+            color: $red;
+            padding: 1rem 2rem;
+            background-color: $dark;
+        }
+        > article {
+            margin: 2rem 0;
+            text-align: center;
+            > h4 {
+                padding: 2rem 0;
+                text-transform: uppercase;
+                text-align: center;
+                font: 100 2rem "Roboto";
+            }
+            p {
+                text-align: center;
+                letter-spacing: 2px;
+                word-spacing: 5px;
+                line-height: 200%;
+            }
+
+            > a {
+                background-color: $red;
+                cursor: pointer;
+                border-radius: 100%;
+                color: white;
+                height: 2.5rem;
+                width: 2.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+                margin: 1rem auto;
+                &:hover {
+                    color: $red;
+                    background-color: $dark;
+                }
+            }
+        }
+        > div {
+            background-color: $dark;
+            padding: 2rem;
+            color: white;
+            > h2 {
+                text-align: center;
+                text-transform: uppercase;
+            }
+            > article {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                > div {
+                    text-align: center;
+                    > img {
+                        width: 150px;
+                        height: 150px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                    > h3 {
+                        margin: 1rem;
+                    }
+                }
+                > div {
+                    padding: 3rem;
+                    > p {
+                        font-family: cursive;
+                        margin: 1rem 0;
+                        line-height: 150%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about > main {
+        > h1 {
+            font: 300 1.5rem "Roboto";
+        }
+        > article {
+            margin: 1rem 2rem;
+
+            > h4 {
+                padding: 1rem 0;
+                font: 300 1rem "Roboto";
+            }
+            p {
+                letter-spacing: 0;
+                word-spacing: 3px;
+                line-height: 150%;
+            }
+        }
+        > div {
+            padding: 1rem;
+
+            > article {
+                margin-top: 1rem;
+                flex-direction: column;
+                > div {
+                    padding: 0 1rem;
+                }
+            }
+        }
+    }
+}

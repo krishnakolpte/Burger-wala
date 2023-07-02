@@ -1,0 +1,108 @@
+/** @format */
+
+@import "colors";
+
+.orderDetails {
+    width: 100%;
+    background-color: $pink;
+
+    > main {
+        max-width: 900px;
+        background-color: white;
+        margin: auto;
+        padding: 2rem;
+        overflow-x: auto;
+
+        > h1 {
+            text-transform: uppercase;
+            font: 100 2rem "Roboto";
+            text-align: center;
+            margin: 3rem;
+        }
+        > div {
+            margin: 2rem 0;
+            margin-left: 3rem;
+            > h1 {
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+            > p {
+                font-weight: 200;
+                white-space: nowrap;
+                letter-spacing: 1px;
+                margin: 2rem;
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                background-color: whitesmoke;
+                padding: 1rem;
+                border-radius: 10px;
+            }
+        }
+        > article {
+            > h1 {
+                text-transform: uppercase;
+                font-size: 2rem;
+                margin: 2rem 0;
+                letter-spacing: 2px;
+            }
+            > div {
+                background-color: rgb(246, 246, 246);
+                margin: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem;
+                border-radius: 5px;
+                > h4 {
+                    letter-spacing: 2px;
+                    font-weight: 200;
+                }
+                > div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .orderDetails {
+        > main {
+            > h1 {
+                margin: 1rem;
+            }
+            div {
+                margin-left: 0%;
+                > h1 {
+                    font-size: 1.3rem;
+                }
+                > p {
+                    grid-template-columns: 1fr;
+                    gap: 10px;
+                    padding: 0.6rem;
+                    border-radius: 5px;
+                }
+            }
+            > article {
+                > h1 {
+                    font-size: 1.3rem;
+                    margin: 1rem 0;
+                    letter-spacing: 1px;
+                }
+                > div {
+                    margin: 1rem;
+                    padding: 0.8rem;
+                    border-radius: 2px;
+
+                    > div {
+                        gap: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
