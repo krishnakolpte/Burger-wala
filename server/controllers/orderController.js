@@ -68,10 +68,7 @@ export const placeOrderOnline = asyncError(async (req, res, next) => {
         currency: "INR",
     };
 
-    console.log(instance);
     const order = await instance.orders.create(options);
-
-    console.log(order);
 
     res.status(201).json({
         success: true,
