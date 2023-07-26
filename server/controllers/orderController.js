@@ -6,6 +6,7 @@ import { Payment } from "../models/paymentModel.js";
 import ErrorHandler from "../utils/ErrorHandler.js";
 import { instance } from "../server.js";
 import crypto from "crypto";
+import { json } from "express";
 
 export const placeOrder = asyncError(async (req, res, next) => {
     const {
@@ -70,7 +71,7 @@ export const placeOrderOnline = asyncError(async (req, res, next) => {
 
     const order = await instance.orders.create(options);
 
-    confirm(order);
+    console.log(order);
 
     res.status(201).json({
         success: true,
