@@ -70,6 +70,8 @@ export const placeOrderOnline = asyncError(async (req, res, next) => {
 
     const order = await instance.orders.create(options);
 
+    confirm(order);
+
     res.status(201).json({
         success: true,
         order,
